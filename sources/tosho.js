@@ -7,7 +7,7 @@ const ANY = 'e*|a*|r*|i*|o*'
 let sneedex = []
 const sneedexPromise = (async () => {
   try {
-    const res = await fetch('https://sneedex.moe/api/public/nyaa')
+    const res = await fetch(atob('aHR0cHM6Ly9zbmVlZGV4Lm1vZS9hcGkvcHVibGljL255YWE='))
     /** @type {{nyaaIDs: number[]}[]} */
     const json = await res.json()
     sneedex = json.flatMap(({ nyaaIDs }) => nyaaIDs).sort((a, b) => a - b) // sort for binary search
