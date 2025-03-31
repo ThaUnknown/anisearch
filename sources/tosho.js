@@ -93,8 +93,6 @@ export default new class Tosho extends AbstractSource {
 
     await sneedexPromise
     if (data.length) return this.map(data)
-    // TODO: this shouldn't really be required anymore? test.
-    if (resolution) return this.single({ anidbEid, exclusions }) // some releases like dvd might be in weird resolutions like 540p
     return []
   }
 
@@ -109,8 +107,6 @@ export default new class Tosho extends AbstractSource {
 
     await sneedexPromise
     if (data.length) return this.map(data, true)
-    // TODO: this shouldn't really be required anymore? test.
-    if (resolution) return this.batch({ anidbAid, episodeCount, exclusions }) // some releases like dvd might be in weird resolutions like 540p
     return []
   }
 
@@ -125,8 +121,6 @@ export default new class Tosho extends AbstractSource {
 
     await sneedexPromise
     if (data.length) return this.map(data, true)
-    // TODO: this shouldn't really be required anymore? test.
-    if (resolution) return this.movie({ anidbAid, exclusions }) // some releases like dvd might be in weird resolutions like 540p
     return []
   }
 }()
