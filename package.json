@@ -1,6 +1,6 @@
 {
   "name": "anisearch",
-  "version": "1.0.8",
+  "version": "1.0.13",
   "type": "module",
   "description": "Finds anime from various sources",
   "main": "index.js",
